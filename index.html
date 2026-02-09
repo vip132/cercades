@@ -1,223 +1,249 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>CERCADES - Cercle des Amis pour le Développement</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* ======= RESET / GLOBAL ======= */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    a { text-decoration: none; }
+<meta charset="UTF-8">
+<title>CERCADES - Cercle des Amis pour le Développement</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* GLOBAL */
+body {
+  font-family: Arial, sans-serif;
+  margin:0; padding:0;
+  background:#f9f9f9;
+  color:#333;
+}
+a { text-decoration: none; }
 
-    /* ======= HEADER ======= */
-    .header {
-      display: flex;
-      align-items: center; /* centre verticalement tout le contenu du header */
-      justify-content: space-between;
-      padding: 15px 30px;
-      background: #ffffff;
-      border-bottom: 3px solid #0055a5;
-    }
+/* HEADER PROFESSIONNEL */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background:#ffffff;
+  border-bottom: 3px solid #0055a5;
+}
 
-    .logo-block {
-      display: flex;
-      align-items: center; /* centre verticalement texte par rapport au logo */
-    }
+.logo-block {
+  display: flex;
+  align-items: center;
+}
 
-    .logo-block img {
-      height: 90px; /* logo plus grand */
-      margin-right: 8px; /* distance texte/logo */
-    }
+.logo-block img {
+  height: 90px;
+  margin-right: 10px;
+}
 
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* centrer texte verticalement */
-    }
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 90px;
+}
 
-    .signification {
-      color: #0055a5; /* texte bleu */
-      font-size: 14px;
-      line-height: 1.4;
-      font-weight: normal;
-      text-align: left;
-    }
+.signification {
+  color: #0055a5;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: left;
+}
 
-    .orange {
-      color: #f58c1f; /* lettres du sigle en orange */
-      font-weight: bold;
-    }
+.orange { color: #f58c1f; font-weight:bold; }
 
-    /* Menu navigation */
-    .nav a {
-      margin-left: 18px;
-      text-decoration: none;
-      color: #0055a5;
-      font-weight: bold;
-    }
+/* MENU */
+.nav a {
+  margin-left: 18px;
+  text-decoration:none;
+  color:#0055a5;
+  font-weight:bold;
+}
+.nav a:hover { text-decoration:underline; }
 
-    .nav a:hover {
-      text-decoration: underline;
-    }
+/* BOUTONS LANGUE */
+.lang-btn {
+  margin-left:15px;
+  cursor:pointer;
+  background:#f58c1f;
+  color:#fff;
+  padding:5px 10px;
+  border-radius:4px;
+  font-size:12px;
+}
+.lang-btn:hover { background:#e07b00; }
 
-    /* ======= SECTIONS ======= */
-    section {
-      padding: 40px 20px;
-    }
-    section.alt {
-      background: #e8e8e8;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h2 { color: #0055a5; }
+/* SECTIONS */
+section { padding:40px 20px; }
+section.alt { background:#e8e8e8; }
+.container { width:90%; max-width:1200px; margin:auto; }
+h2 { color:#0055a5; }
 
-    .grid {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .card {
-      background: #ffffff;
-      padding: 20px;
-      flex: 1 1 250px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+.grid {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.card {
+  background:#fff;
+  padding:20px;
+  flex:1 1 250px;
+  border-radius:5px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
 
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 15px 0;
-    }
-  </style>
+/* FOOTER */
+footer {
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:15px 0;
+}
+
+/* MASQUER/AFFICHER LANGUE */
+.lang { display:none; }
+.lang.active { display:block; }
+</style>
 </head>
 <body>
 
-  <!-- ======= HEADER / EN-TETE ======= -->
-  <header class="header">
-    <div class="logo-block">
-      <img src="logo.png" alt="Logo CERCADES">
-      <div class="logo-text">
-        <div class="signification">
-          <span class="orange">CERC</span>le DES<br>
-          <span class="orange">A</span>MIS POUR LE<br>
-          <span class="orange">D</span>ÉVELOPPEMENT<br>
-          L’<span class="orange">E</span>NTRAIDE ET LA<br>
-          <span class="orange">S</span>OLIDARITÉ
-        </div>
+<!-- HEADER -->
+<header class="header">
+  <div class="logo-block">
+    <img src="logo.png" alt="Logo CERCADES">
+    <div class="logo-text">
+      <div class="signification">
+        <span class="orange">CERC</span>le<br>
+        <span class="orange">A</span>mis<br>
+        <span class="orange">D</span>éveloppement<br>
+        L’<span class="orange">E</span>ntraide<br>
+        <span class="orange">S</span>olidarité
       </div>
     </div>
+  </div>
 
-    <nav class="nav">
-      <a href="#home">Accueil</a>
-      <a href="#about">À propos</a>
-      <a href="#actions">Nos Actions</a>
-      <a href="#documents">Documents</a>
-      <a href="#contact">S’impliquer</a>
-    </nav>
-  </header>
+  <nav class="nav">
+    <a href="#home">Accueil</a>
+    <a href="#about">À propos</a>
+    <a href="#actions">Nos Actions</a>
+    <a href="#documents">Documents</a>
+    <a href="#contact">S’impliquer</a>
+    <span class="lang-btn" onclick="switchLang('fr')">FR</span>
+    <span class="lang-btn" onclick="switchLang('en')">EN</span>
+  </nav>
+</header>
 
-  <!-- ======= ACCUEIL ======= -->
-  <section id="home">
-    <div class="container">
-      <h2>Accueil / Home</h2>
-      <p><strong>FR :</strong> Bienvenue sur le site officiel de CERCADES, Cercle des Amis pour le Développement, l’Entraide et la Solidarité au Cameroun.</p>
-      <p><strong>EN :</strong> Welcome to the official site of CERCADES, Circle of Friends for Development, Mutual Aid and Solidarity in Cameroon.</p>
+<!-- ACCUEIL -->
+<section id="home">
+  <div class="container">
+    <div class="lang active" id="fr">
+      <h2>Accueil</h2>
+      <p>Bienvenue sur le site officiel de CERCADES, Cercle des Amis pour le Développement, l’Entraide et la Solidarité au Cameroun.</p>
     </div>
-  </section>
+    <div class="lang" id="en">
+      <h2>Home</h2>
+      <p>Welcome to the official site of CERCADES, Circle of Friends for Development, Mutual Aid and Solidarity in Cameroon.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- ======= A PROPOS ======= -->
-  <section id="about">
-    <div class="container">
+<!-- A PROPOS -->
+<section id="about">
+  <div class="container">
+    <div class="lang active" id="fr-about">
       <h2>À propos de CERCADES</h2>
-      <p>
-        CERCADES est une association déclarée au Cameroun sous le numéro :
-        <strong>000044/RDA/J06/A2/SAAJP/BAPP</strong>.
-      </p>
+      <p>CERCADES est une association déclarée au Cameroun sous le numéro : <strong>000044/RDA/J06/A2/SAAJP/BAPP</strong>.</p>
       <div class="grid">
         <div class="card">
           <h3>Notre mission</h3>
-          <p>
-            Promouvoir le développement local, renforcer l’entraide communautaire
-            et encourager la solidarité sociale.
-          </p>
+          <p>Promouvoir le développement local, renforcer l’entraide communautaire et encourager la solidarité sociale.</p>
         </div>
         <div class="card">
           <h3>Notre vision</h3>
-          <p>
-            Des communautés solidaires, autonomes et engagées pour un avenir durable.
-          </p>
+          <p>Des communautés solidaires, autonomes et engagées pour un avenir durable.</p>
         </div>
         <div class="card">
           <h3>Nos valeurs</h3>
-          <p>
-            Solidarité • Transparence • Engagement • Responsabilité
-          </p>
+          <p>Solidarité • Transparence • Engagement • Responsabilité</p>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ======= ACTIONS ======= -->
-  <section id="actions" class="alt">
-    <div class="container">
-      <h2>Nos actions</h2>
-      <p>
-        CERCADES mène des actions concrètes sur le terrain en faveur des populations.
-        Cette section présentera nos activités avec photos, dates et lieux.
-      </p>
-      <div class="card">
-        <p><em>Première action à publier prochainement.</em></p>
+    <div class="lang" id="en-about">
+      <h2>About CERCADES</h2>
+      <p>CERCADES is a legally registered association in Cameroon. Declaration No: <strong>000044/RDA/J06/A2/SAAJP/BAPP</strong>.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Our Mission</h3>
+          <p>Promote local development, strengthen community support, and encourage social solidarity.</p>
+        </div>
+        <div class="card">
+          <h3>Our Vision</h3>
+          <p>Build supportive, autonomous, and engaged communities for a sustainable future.</p>
+        </div>
+        <div class="card">
+          <h3>Our Values</h3>
+          <p>Solidarity • Transparency • Commitment • Responsibility</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ======= DOCUMENTS ======= -->
-  <section id="documents">
-    <div class="container">
-      <h2>Documents officiels</h2>
-      <p>
-        Pour plus de transparence, nos documents officiels seront disponibles ici.
-      </p>
-      <ul>
-        <li>Déclaration d’association</li>
-        <li>Statuts</li>
-        <li>Règlement intérieur</li>
-        <li>Projets</li>
-      </ul>
-    </div>
-  </section>
+<!-- ACTIONS -->
+<section id="actions" class="alt">
+  <div class="container">
+    <h2>Nos actions</h2>
+    <p>CERCADES mène des actions concrètes sur le terrain en faveur des populations. Cette section présentera nos activités avec photos, dates et lieux.</p>
+    <div class="card"><p><em>Première action à publier prochainement.</em></p></div>
+  </div>
+</section>
 
-  <!-- ======= CONTACT ======= -->
-  <section id="contact" class="alt">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>
-        📧 Email : <a href="mailto:contact@cercades.cf">contact@cercades.cf</a><br>
-        📱 WhatsApp : +237 XXXXXXXX<br>
-        📍 Pays : Cameroun
-      </p>
-    </div>
-  </section>
+<!-- DOCUMENTS -->
+<section id="documents">
+  <div class="container">
+    <h2>Documents officiels</h2>
+    <p>Pour plus de transparence, nos documents officiels seront disponibles ici.</p>
+    <ul>
+      <li>Déclaration d’association</li>
+      <li>Statuts</li>
+      <li>Règlement intérieur</li>
+      <li>Projets</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- ======= FOOTER ======= -->
-  <footer>
-    <div class="container">
-      <small>
-        © 2026 CERCADES – Tous droits réservés | Association déclarée au Cameroun
-      </small>
-    </div>
-  </footer>
+<!-- CONTACT -->
+<section id="contact" class="alt">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>
+      📧 Email : <a href="mailto:contact@cercades.cf">contact@cercades.cf</a><br>
+      📱 WhatsApp : +237 XXXXXXXX<br>
+      📍 Pays : Cameroun
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <small>© 2026 CERCADES – Tous droits réservés | Association déclarée au Cameroun</small>
+  </div>
+</footer>
+
+<script>
+/* SWITCH LANGUE */
+function switchLang(lang) {
+  // cacher tout
+  document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+  // afficher la langue choisie
+  if(lang === 'fr') {
+    document.getElementById('fr').classList.add('active');
+    document.getElementById('fr-about').classList.add('active');
+  } else {
+    document.getElementById('en').classList.add('active');
+    document.getElementById('en-about').classList.add('active');
+  }
+}
+</script>
 
 </body>
 </html>
