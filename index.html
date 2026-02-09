@@ -1,91 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>CERCADES - Cercle des Amis pour le Développement</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
-        header { background:#0055a5; color:#fff; padding:15px 20px; display:flex; align-items:center; }
-        header img { height:50px; margin-right:15px; }
-        nav { margin-left:auto; }
-        nav a { color:#fff; text-decoration:none; margin-left:15px; font-weight:bold; }
-        nav a:hover { text-decoration:underline; }
-        main { padding:20px; max-width:1000px; margin:auto; }
-        h1, h2 { color:#0055a5; }
-        section { margin-bottom:40px; }
-        footer { background:#222; color:#fff; text-align:center; padding:15px 0; }
-        .lang-switch { float:right; }
-        .btn { display:inline-block; padding:10px 20px; background:#f58c1f; color:#fff; text-decoration:none; border-radius:5px; margin-top:10px; }
-        .btn:hover { background:#e07b00; }
-    </style>
+  <meta charset="UTF-8">
+  <title>CERCADES – Développement, Entraide et Solidarité</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CERCADES – Cercle des Amis pour le Développement, l’Entraide et la Solidarité au Cameroun.">
+  <style>
+    :root{
+      --blue:#0055a5;
+      --orange:#f58c1f;
+      --dark:#222;
+      --light:#f7f9fc;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    header{background:var(--blue);color:#fff}
+    .container{max-width:1100px;margin:auto;padding:0 20px}
+    .topbar{display:flex;align-items:center;gap:15px;padding:15px 0}
+    .topbar img{height:60px}
+    nav{margin-left:auto;display:flex;gap:15px;flex-wrap:wrap}
+    nav a{color:#fff;font-weight:bold}
+    nav a:hover{text-decoration:underline}
+    .hero{background:linear-gradient(135deg,#004a91,#0b6bd3);color:#fff;padding:60px 0}
+    .hero h1{font-size:2.2em;margin:0 0 10px}
+    .hero p{max-width:700px;font-size:1.05em}
+    .btn{display:inline-block;background:var(--orange);color:#fff;padding:12px 22px;border-radius:6px;font-weight:bold;margin-top:15px}
+    .btn:hover{opacity:.9}
+    section{padding:50px 0}
+    section.alt{background:var(--light)}
+    h2{color:var(--blue);margin-top:0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+    .card{background:#fff;border-radius:8px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    footer{background:var(--dark);color:#fff;text-align:center;padding:20px 0}
+    footer small{opacity:.85}
+    @media(max-width:600px){
+      .hero h1{font-size:1.7em}
+      .topbar{flex-direction:column;align-items:flex-start}
+      nav{margin-left:0}
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <img src="logo.png" alt="Logo CERCADES" style="width:150px;">
-        <h1>CERCADES</h1>
-        <nav>
-            <a href="#home">Accueil</a>
-            <a href="#about">À propos</a>
-            <a href="#actions">Nos Actions</a>
-            <a href="#documents">Documents</a>
-            <a href="#getinvolved">S’impliquer</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <main>
-        <!-- ACCUEIL -->
-        <section id="home">
-            <h2>Accueil / Home</h2>
-            <p><strong>FR :</strong> Bienvenue sur le site officiel de CERCADES, Cercle des Amis pour le Développement, l’Entraide et la Solidarité au Cameroun.</p>
-            <p><strong>EN :</strong> Welcome to the official site of CERCADES, Circle of Friends for Development, Mutual Aid and Solidarity in Cameroon.</p>
-            <a href="#getinvolved" class="btn">Nous soutenir / Support Us</a>
-        </section>
+<header>
+  <div class="container topbar">
+    <img src="logo.png" alt="Logo CERCADES">
+    <strong>CERCADES</strong>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="#actions">Nos actions</a>
+      <a href="#documents">Documents</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-        <!-- À PROPOS -->
-        <section id="about">
-            <h2>À propos / About Us</h2>
-            <p><strong>FR :</strong> CERCADES est une association légalement reconnue au Cameroun. Déclaration d'association N° 000044/RDA/J06/A2/SAAJP/BAPP.</p>
-            <p><strong>EN :</strong> CERCADES is a legally registered association in Cameroon. Association Declaration No. 000044/RDA/J06/A2/SAAJP/BAPP.</p>
-            <p><strong>Mission / Mission :</strong> Promouvoir le développement local, la solidarité et l’entraide communautaire.</p>
-            <p><strong>Vision / Vision :</strong> Construire des communautés solidaires, autonomes et engagées.</p>
-        </section>
+<section class="hero">
+  <div class="container">
+    <h1>CERCADES – Agir pour le développement et la solidarité au Cameroun</h1>
+    <p>
+      Le Cercle des Amis pour le Développement, l’Entraide et la Solidarité (CERCADES)
+      est une association légalement reconnue qui œuvre pour l’amélioration des conditions
+      de vie des communautés locales.
+    </p>
+    <a href="#actions" class="btn">Découvrir nos actions</a>
+  </div>
+</section>
 
-        <!-- NOS ACTIONS -->
-        <section id="actions">
-            <h2>Nos Actions / Our Actions</h2>
-            <p><strong>FR :</strong> Retrouvez ici toutes nos actions sur le terrain avec photos et vidéos.</p>
-            <p><strong>EN :</strong> Find here all our field actions with photos and videos.</p>
-            <p>(Première publication à ajouter via GitHub ou CMS)</p>
-        </section>
+<section id="about">
+  <div class="container">
+    <h2>À propos de CERCADES</h2>
+    <p>
+      CERCADES est une association déclarée au Cameroun sous le numéro :
+      <strong>000044/RDA/J06/A2/SAAJP/BAPP</strong>.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3>Notre mission</h3>
+        <p>
+          Promouvoir le développement local, renforcer l’entraide communautaire
+          et encourager la solidarité sociale.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Notre vision</h3>
+        <p>
+          Des communautés solidaires, autonomes et engagées pour un avenir durable.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Nos valeurs</h3>
+        <p>
+          Solidarité • Transparence • Engagement • Responsabilité
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- DOCUMENTS -->
-        <section id="documents">
-            <h2>Documents / Documents</h2>
-            <p><strong>FR :</strong> Statuts, règlements et projets disponibles en PDF.</p>
-            <p><strong>EN :</strong> Statutes, regulations and projects available in PDF.</p>
-            <p>(Ajouter les fichiers PDF dans le dépôt et lister ici)</p>
-        </section>
+<section id="actions" class="alt">
+  <div class="container">
+    <h2>Nos actions</h2>
+    <p>
+      CERCADES mène des actions concrètes sur le terrain en faveur des populations.
+      Cette section présentera nos activités avec photos, dates et lieux.
+    </p>
+    <div class="card">
+      <p><em>Première action à publier prochainement.</em></p>
+    </div>
+  </div>
+</section>
 
-        <!-- S’IMPLIQUER -->
-        <section id="getinvolved">
-            <h2>S’impliquer / Get Involved</h2>
-            <p><strong>FR :</strong> Pour devenir bénévole ou partenaire, contactez-nous via le formulaire ci-dessous.</p>
-            <p><strong>EN :</strong> To become a volunteer or partner, contact us via the form below.</p>
-        </section>
+<section id="documents">
+  <div class="container">
+    <h2>Documents officiels</h2>
+    <p>
+      Pour plus de transparence, nos documents officiels seront disponibles ici.
+    </p>
+    <ul>
+      <li>Déclaration d’association</li>
+      <li>Statuts</li>
+      <li>Règlement intérieur</li>
+      <li>Projets</li>
+    </ul>
+  </div>
+</section>
 
-        <!-- CONTACT -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email : <a href="mailto:contact@cercades.cf">contact@cercades.cf</a></p>
-            <p>WhatsApp : +237 XXXXXXXX</p>
-            <p>Adresse : Cameroun</p>
-        </section>
-    </main>
+<section id="contact" class="alt">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>
+      📧 Email : <a href="mailto:contact@cercades.cf">contact@cercades.cf</a><br>
+      📱 WhatsApp : +237 XXXXXXXX<br>
+      📍 Pays : Cameroun
+    </p>
+  </div>
+</section>
 
-    <footer>
-        <p>CERCADES © 2026 - Tous droits réservés / All rights reserved</p>
-    </footer>
-<!-- redeploy: 2026-02-08 --></body>
+<footer>
+  <div class="container">
+    <small>
+      © 2026 CERCADES – Tous droits réservés | Association déclarée au Cameroun
+    </small>
+  </div>
+</footer>
+
+</body>
 </html>
