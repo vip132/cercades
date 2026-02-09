@@ -15,7 +15,26 @@
     *{box-sizing:border-box}
     body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;background:#fff;line-height:1.6}
     a{text-decoration:none;color:inherit}
-    header{background:var(--blue);color:#fff}
+    <header class="header">
+  <div class="container header-content">
+
+    <div class="logo-area">
+      <img src="logo.png" alt="Global Service Press Logo" class="logo">
+      <div class="brand">
+        <h1>GLOBAL SERVICE PRESS</h1>
+        <p>Services numériques & impression professionnelle</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#about">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
     .container{max-width:1100px;margin:auto;padding:0 20px}
     .topbar{display:flex;align-items:center;gap:15px;padding:15px 0}
     .topbar img{height:60px}
