@@ -12,54 +12,53 @@ body {
   background:#f9f9f9;
   color:#333;
 }
-a { text-decoration: none; }
+a { text-decoration:none; }
 
-/* HEADER PROFESSIONNEL */
+/* HEADER */
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 30px;
   background:#ffffff;
-  border-bottom: 3px solid #0055a5;
+  border-bottom:3px solid #0055a5;
 }
 
 .logo-block {
-  display: flex;
-  align-items: center;
+  display:flex;
+  align-items:center;
 }
 
 .logo-block img {
-  height: 90px;
-  margin-right: 10px;
+  height:90px;
+  margin-right:10px;
 }
 
 .logo-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-height: 90px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  max-height:90px;
 }
 
 .signification {
-  color: #0055a5;
-  font-size: 14px;
-  line-height: 1.2;
-  text-align: left;
+  color:#0055a5;
+  font-size:14px;
+  line-height:1.2;
+  text-align:left;
 }
 
-.orange { color: #f58c1f; font-weight:bold; }
+.orange { color:#f58c1f; font-weight:bold; }
 
 /* MENU */
 .nav a {
-  margin-left: 18px;
-  text-decoration:none;
-  color:#0055a5;
+  margin-left:18px;
   font-weight:bold;
+  color:#0055a5;
 }
 .nav a:hover { text-decoration:underline; }
 
-/* BOUTONS LANGUE */
+/* LANGUE */
 .lang-btn {
   margin-left:15px;
   cursor:pointer;
@@ -70,6 +69,42 @@ a { text-decoration: none; }
   font-size:12px;
 }
 .lang-btn:hover { background:#e07b00; }
+
+/* BANNIERE ACCUEIL */
+.banner {
+  position:relative;
+  background:#0055a5 url('banner.jpg') no-repeat center center;
+  background-size:cover;
+  height:300px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  text-align:center;
+  flex-direction:column;
+}
+
+.banner h1 {
+  font-size:32px;
+  margin:0;
+  text-shadow:2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.banner p {
+  font-size:18px;
+  margin:10px 0;
+  text-shadow:1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.banner .btn {
+  background:#f58c1f;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:5px;
+  font-weight:bold;
+  margin-top:15px;
+}
+.banner .btn:hover { background:#e07b00; }
 
 /* SECTIONS */
 section { padding:40px 20px; }
@@ -98,9 +133,10 @@ footer {
   padding:15px 0;
 }
 
-/* MASQUER/AFFICHER LANGUE */
+/* LANGUE SWITCH */
 .lang { display:none; }
 .lang.active { display:block; }
+
 </style>
 </head>
 <body>
@@ -130,6 +166,20 @@ footer {
     <span class="lang-btn" onclick="switchLang('en')">EN</span>
   </nav>
 </header>
+
+<!-- BANNIERE DYNAMIQUE -->
+<section class="banner">
+  <div class="lang active" id="fr-banner">
+    <h1>Agir pour un Cameroun Solidaire</h1>
+    <p>Rejoignez-nous dans nos actions de développement, solidarité et entraide.</p>
+    <a href="#contact" class="btn">Nous soutenir</a>
+  </div>
+  <div class="lang" id="en-banner">
+    <h1>Act for a Supportive Cameroon</h1>
+    <p>Join us in our development, solidarity and community support actions.</p>
+    <a href="#contact" class="btn">Support Us</a>
+  </div>
+</section>
 
 <!-- ACCUEIL -->
 <section id="home">
@@ -230,15 +280,14 @@ footer {
 </footer>
 
 <script>
-/* SWITCH LANGUE */
 function switchLang(lang) {
-  // cacher tout
-  document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-  // afficher la langue choisie
-  if(lang === 'fr') {
+  document.querySelectorAll('.lang').forEach(el=>el.classList.remove('active'));
+  if(lang==='fr'){
+    document.getElementById('fr-banner').classList.add('active');
     document.getElementById('fr').classList.add('active');
     document.getElementById('fr-about').classList.add('active');
   } else {
+    document.getElementById('en-banner').classList.add('active');
     document.getElementById('en').classList.add('active');
     document.getElementById('en-about').classList.add('active');
   }
@@ -246,4 +295,4 @@ function switchLang(lang) {
 </script>
 
 </body>
-</html>
+      </html>
