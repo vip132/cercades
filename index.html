@@ -2,204 +2,199 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>CERCADES</title>
+<title>CERCADES – Développement, Entraide et Solidarité</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* BASE */
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#f6f6f6;
-  color:#333;
-}
-a{text-decoration:none}
-
-/* HEADER */
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:15px 25px;
-  background:#fff;
-  border-bottom:3px solid #0055a5;
-  flex-wrap:wrap;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 
-.logo-zone{
-  display:flex;
-  align-items:center;
+/* ===== HEADER ===== */
+header {
+  background: #ffffff;
+  border-bottom: 2px solid #eee;
 }
 
-.logo-zone img{
-  height:85px;
+.header-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.logo-text{
-  margin-left:10px;
-  font-size:14px;
-  line-height:1.2;
-  color:#0055a5;
+.logo-block {
+  display: flex;
+  align-items: center;
 }
 
-.orange{color:#f58c1f;font-weight:bold}
-
-/* MENU */
-nav a{
-  margin-left:18px;
-  color:#0055a5;
-  font-weight:bold;
-}
-nav a:hover{text-decoration:underline}
-
-.lang-btn{
-  background:#f58c1f;
-  color:#fff;
-  padding:5px 10px;
-  border-radius:4px;
-  font-size:12px;
-  cursor:pointer;
-  margin-left:10px;
+.logo-block img {
+  height: 90px;
 }
 
-/* HERO / BANNIERE */
-.hero{
-  min-height:75vh;
-  background:
-    linear-gradient(rgba(0,85,165,0.65), rgba(0,85,165,0.65)),
-    url("banner.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
+.logo-text {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
 }
 
-.hero-content{
-  max-width:800px;
-  color:#fff;
+.logo-text div {
+  font-size: 14px;
+  line-height: 1.15;
+  color: #0055a5;
 }
 
-.hero h1{
-  font-size:clamp(24px,5vw,42px);
-  margin-bottom:15px;
+.orange {
+  color: #f58c1f;
+  font-weight: bold;
 }
 
-.hero p{
-  font-size:clamp(16px,3vw,20px);
-  margin-bottom:25px;
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #0055a5;
+  font-weight: bold;
 }
 
-.hero .btn{
-  display:inline-block;
-  background:#f58c1f;
-  color:#fff;
-  padding:12px 25px;
-  border-radius:5px;
-  font-weight:bold;
-}
-.hero .btn:hover{background:#e07b00}
-
-/* LANGUE */
-.lang{display:none}
-.lang.active{display:block}
-
-/* SECTIONS */
-section{padding:50px 20px}
-.alt{background:#eaeaea}
-.container{max-width:1200px;margin:auto}
-h2{color:#0055a5}
-
-.grid{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-}
-.card{
-  background:#fff;
-  padding:20px;
-  border-radius:6px;
-  box-shadow:0 0 10px rgba(0,0,0,0.1);
-  flex:1 1 250px;
+nav a:hover {
+  text-decoration: underline;
 }
 
-/* FOOTER */
-footer{
-  background:#222;
-  color:#fff;
-  text-align:center;
-  padding:15px;
+/* ===== SECTIONS ===== */
+section {
+  padding: 60px 20px;
 }
 
-/* RESPONSIVE MENU */
-@media(max-width:768px){
-  nav{margin-top:10px;width:100%}
-  nav a{display:inline-block;margin:5px 10px}
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #0055a5;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+/* ===== IMPACT ===== */
+#impact {
+  background: #f9f9f9;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.impact-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.impact-card h3 {
+  font-size: 36px;
+  color: #f58c1f;
+  margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="logo-zone">
-    <img src="logo.png" alt="CERCADES">
-    <div class="logo-text">
-      <span class="orange">CERC</span>le<br>
-      <span class="orange">A</span>mis<br>
-      <span class="orange">D</span>éveloppement<br>
-      L’<span class="orange">E</span>ntraide<br>
-      <span class="orange">S</span>olidarité
+  <div class="header-container">
+    <div class="logo-block">
+      <img src="logo.png" alt="Logo CERCADES">
+      <div class="logo-text">
+        <div>
+          <span class="orange">CERC</span>le des<br>
+          <span class="orange">A</span>mis pour le<br>
+          <span class="orange">D</span>éveloppement<br>
+          <span class="orange">E</span>ntraide et<br>
+          <span class="orange">S</span>olidarité
+        </div>
+      </div>
     </div>
-  </div>
 
-  <nav>
-    <a href="#about">À propos</a>
-    <a href="#actions">Actions</a>
-    <a href="#contact">Contact</a>
-    <span class="lang-btn" onclick="switchLang('fr')">FR</span>
-    <span class="lang-btn" onclick="switchLang('en')">EN</span>
-  </nav>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="#impact">Impact</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content lang active" id="fr">
-    <h1>Agir pour un Cameroun solidaire</h1>
-    <p>Développement local, entraide communautaire et solidarité durable.</p>
-    <a href="#contact" class="btn">Nous soutenir</a>
-  </div>
-
-  <div class="hero-content lang" id="en">
-    <h1>Act for a supportive Cameroon</h1>
-    <p>Local development, community support and lasting solidarity.</p>
-    <a href="#contact" class="btn">Support us</a>
-  </div>
-</section>
-
-<!-- A PROPOS -->
 <section id="about">
   <div class="container">
     <h2>À propos de CERCADES</h2>
-    <p>Association déclarée au Cameroun sous le numéro
+    <p class="section-intro">
+      CERCADES est une association légalement déclarée au Cameroun sous le numéro
       <strong>000044/RDA/J06/A2/SAAJP/BAPP</strong>.
     </p>
-    <div class="grid">
-      <div class="card"><h3>Mission</h3><p>Promouvoir le développement et l’entraide.</p></div>
-      <div class="card"><h3>Vision</h3><p>Des communautés autonomes et solidaires.</p></div>
-      <div class="card"><h3>Valeurs</h3><p>Solidarité • Engagement • Transparence</p></div>
+    <p style="text-align:center;">
+      Elle œuvre pour le développement local, l’entraide communautaire et la solidarité sociale.
+    </p>
+  </div>
+</section>
+
+<section id="impact">
+  <div class="container">
+    <h2>Notre impact</h2>
+    <p class="section-intro">
+      Nos actions visent à améliorer concrètement les conditions de vie des populations.
+    </p>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <h3>+20</h3>
+        <p>Actions communautaires</p>
+      </div>
+      <div class="impact-card">
+        <h3>+300</h3>
+        <p>Bénéficiaires</p>
+      </div>
+      <div class="impact-card">
+        <h3>+5</h3>
+        <p>Localités touchées</p>
+      </div>
+      <div class="impact-card">
+        <h3>100%</h3>
+        <p>Engagement bénévole</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="alt">
+<section id="contact">
   <div class="container">
     <h2>Contact</h2>
-    <p>
+    <p style="text-align:center;">
       📧 contact@cercades.cf<br>
-      📱 +237 XXXXXXXX<br>
+      📱 WhatsApp : +237 XXXXXXXX<br>
       📍 Cameroun
     </p>
   </div>
@@ -208,13 +203,6 @@ footer{
 <footer>
   © 2026 CERCADES – Tous droits réservés
 </footer>
-
-<script>
-function switchLang(l){
-  document.querySelectorAll('.lang').forEach(e=>e.classList.remove('active'));
-  document.getElementById(l).classList.add('active');
-}
-</script>
 
 </body>
 </html>
