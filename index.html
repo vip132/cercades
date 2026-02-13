@@ -1,207 +1,150 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CERCADES - Accueil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CERCADES</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
 
-/* ===== HEADER PRINCIPAL ===== */
-header {
-  background: #f58c1f;
-  padding: 10px 0 0 0;
-}
+    /* ===== HEADER ===== */
+    header {
+      background: orange;
+      text-align: center;
+      padding: 20px 10px 10px 10px;
+    }
 
-/* Ligne logo + signification */
-.top-header {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+    /* Bloc logo + texte */
+    .logo-bloc {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-/* Cadre blanc du logo */
-.logo-box {
-  background: #ffffff;
-  padding: 6px 12px;
-  border-radius: 6px;
-}
+    .logo-cadre {
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
+    }
 
-.logo-box img {
-  height: 75px;
-}
+    .logo-cadre img {
+      width: 90px;
+      height: auto;
+      display: block;
+    }
 
-/* Signification du sigle */
-.sigle-text {
-  text-align: center;
-  color: #0055a5;
-  line-height: 1.2;
-  font-size: 15px;
-}
+    .sigle-texte {
+      text-align: left;
+      max-width: 350px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
 
-.sigle-text span {
-  font-weight: bold;
-  color: #0055a5;
-}
+    .sigle-texte strong {
+      color: blue;
+      font-size: 18px;
+    }
 
-/* ===== MENU EN ONGLET SOUS LE LOGO ===== */
-.menu-bar {
-  background: #e07b00;
-  margin-top: 10px;
-}
+    /* ===== MENU HORIZONTAL ===== */
+    nav {
+      margin-top: 15px;
+      overflow-x: auto;
+    }
 
-.menu-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: nowrap;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 0;
-  padding: 12px 0;
-}
+    .menu a {
+      text-decoration: none;
+      color: white;
+      background: #333;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: bold;
+      white-space: nowrap;
+      transition: 0.3s;
+    }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 15px;
-}
+    .menu a:hover {
+      background: black;
+    }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
+    /* ===== CONTENU ===== */
+    .hero {
+      background: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-/* ===== HERO ===== */
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
+    .hero h1 {
+      color: orange;
+      margin-bottom: 10px;
+    }
 
-.hero h1 {
-  font-size: 36px;
-  max-width: 800px;
-  margin: auto;
-}
+    .hero p {
+      font-size: 18px;
+      color: #333;
+    }
 
-.hero p {
-  font-size: 18px;
-  margin-top: 20px;
-}
+    /* ===== RESPONSIVE MOBILE ===== */
+    @media (max-width: 600px) {
+      .sigle-texte {
+        text-align: center;
+        max-width: 100%;
+      }
 
-.btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 25px;
-  background: #f58c1f;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: #e07b00;
-}
-
-/* ===== SECTION ===== */
-section {
-  padding: 60px 20px;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
-}
-
-h2 {
-  color: #0055a5;
-  margin-bottom: 20px;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-</style>
+      .menu {
+        justify-content: flex-start;
+        padding: 0 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="top-header">
-    <!-- LOGO -->
-    <div class="logo-box">
-      <img src="logo.png" alt="Logo CERCADES">
+  <!-- HEADER -->
+  <header>
+    <div class="logo-bloc">
+      <div class="logo-cadre">
+        <img src="logo.png" alt="Logo CERCADES">
+      </div>
+
+      <div class="sigle-texte">
+        <strong>CERCADES</strong><br>
+        Centre de Renforcement des Capacités pour le Développement par l’Entraide et la Solidarité
+      </div>
     </div>
 
-    <!-- SIGNIFICATION DU SIGLE -->
-    <div class="sigle-text">
-      <span>CERC</span>le des<br>
-      <span>A</span>mis pour le<br>
-      <span>D</span>éveloppement par<br>
-      l’<span>E</span>ntraide et la<br>
-      <span>S</span>olidarité
-    </div>
-  </div>
+    <!-- MENU ONGLET -->
+    <nav>
+      <div class="menu">
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="projets.html">Projets</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-  <!-- MENU -->
-  <div class="menu-bar">
-    <div class="menu-container">
-      <nav>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="apropos.html">À propos</a></li>
-          <li><a href="actions.html">Nos actions</a></li>
-          <li><a href="projets.html">Projets</a></li>
-          <li><a href="soutenir.html">Nous soutenir</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
-
-<section class="hero">
-  <h1>Ensemble pour le développement local par l'entraide et la solidarité</h1>
-  <p>CERCADES œuvre pour des communautés solidaires, autonomes et engagées au Cameroun.</p>
-  <a href="soutenir.html" class="btn">Soutenir CERCADES</a>
-</section>
-
-<section>
-  <div class="container">
-    <h2>Qui sommes-nous ?</h2>
-    <p>
-      CERCADES est une association déclarée au Cameroun sous le numéro
-      <strong>000044/RDA/J06/A2/SAAJP/BAPP</strong>.
-      Elle agit pour le développement local, l’entraide communautaire
-      et la solidarité sociale.
-    </p>
-  </div>
-</section>
-
-<footer>
-  © 2026 CERCADES – Tous droits réservés
-</footer>
+  <!-- CONTENU -->
+  <section class="hero">
+    <h1>Ensemble pour le développement local</h1>
+    <p>Par l'entraide et la solidarité</p>
+  </section>
 
 </body>
 </html>
