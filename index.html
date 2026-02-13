@@ -2,70 +2,99 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>CERCADES – Développement, Entraide et Solidarité</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CERCADES - Accueil</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #333;
-  line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header {
-  background: #ffffff;
-  border-bottom: 2px solid #eee;
+  background: #f58c1f;
+  padding: 10px 0;
 }
 
 .header-container {
-  max-width: 1100px;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
-  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo-block {
+/* LOGO + CADRE BLANC */
+.logo-box {
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
 }
 
-.logo-block img {
-  height: 90px;
+.logo-box img {
+  height: 70px;
 }
 
-.logo-text {
-  margin-left: 8px;
+/* MENU */
+nav ul {
+  list-style: none;
   display: flex;
-  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-.logo-text div {
-  font-size: 14px;
-  line-height: 1.15;
-  color: #0055a5;
-}
-
-.orange {
-  color: #f58c1f;
-  font-weight: bold;
-}
-
-nav a {
-  margin-left: 15px;
+nav ul li a {
+  color: #fff;
   text-decoration: none;
-  color: #0055a5;
   font-weight: bold;
 }
 
-nav a:hover {
+nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* ===== SECTIONS ===== */
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: #f58c1f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #e07b00;
+}
+
+/* SECTION */
 section {
   padding: 60px 20px;
 }
@@ -73,47 +102,15 @@ section {
 .container {
   max-width: 1000px;
   margin: auto;
+  text-align: center;
 }
 
 h2 {
   color: #0055a5;
-  text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.section-intro {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  color: #555;
-}
-
-/* ===== IMPACT ===== */
-#impact {
-  background: #f9f9f9;
-}
-
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.impact-card {
-  background: #fff;
-  padding: 30px 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.impact-card h3 {
-  font-size: 36px;
-  color: #f58c1f;
-  margin-bottom: 10px;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
   background: #222;
   color: #fff;
@@ -127,75 +124,37 @@ footer {
 
 <header>
   <div class="header-container">
-    <div class="logo-block">
+    <div class="logo-box">
       <img src="logo.png" alt="Logo CERCADES">
-      <div class="logo-text">
-        <div>
-          <span class="orange">CERC</span>le des<br>
-          <span class="orange">A</span>mis pour le<br>
-          <span class="orange">D</span>éveloppement<br>
-          <span class="orange">E</span>ntraide et<br>
-          <span class="orange">S</span>olidarité
-        </div>
-      </div>
     </div>
 
     <nav>
-      <a href="#about">À propos</a>
-      <a href="#impact">Impact</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="actions.html">Nos actions</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="soutenir.html">Nous soutenir</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
-<section id="about">
+<section class="hero">
+  <h1>Ensemble pour le développement local par l'entraide et la solidarité</h1>
+  <p>CERCADES œuvre pour des communautés solidaires, autonomes et engagées au Cameroun.</p>
+  <a href="soutenir.html" class="btn">Soutenir CERCADES</a>
+</section>
+
+<section>
   <div class="container">
-    <h2>À propos de CERCADES</h2>
-    <p class="section-intro">
-      CERCADES est une association légalement déclarée au Cameroun sous le numéro
+    <h2>Qui sommes-nous ?</h2>
+    <p>
+      CERCADES est une association déclarée au Cameroun sous le numéro
       <strong>000044/RDA/J06/A2/SAAJP/BAPP</strong>.
-    </p>
-    <p style="text-align:center;">
-      Elle œuvre pour le développement local, l’entraide communautaire et la solidarité sociale.
-    </p>
-  </div>
-</section>
-
-<section id="impact">
-  <div class="container">
-    <h2>Notre impact</h2>
-    <p class="section-intro">
-      Nos actions visent à améliorer concrètement les conditions de vie des populations.
-    </p>
-
-    <div class="impact-grid">
-      <div class="impact-card">
-        <h3>+20</h3>
-        <p>Actions communautaires</p>
-      </div>
-      <div class="impact-card">
-        <h3>+300</h3>
-        <p>Bénéficiaires</p>
-      </div>
-      <div class="impact-card">
-        <h3>+5</h3>
-        <p>Localités touchées</p>
-      </div>
-      <div class="impact-card">
-        <h3>100%</h3>
-        <p>Engagement bénévole</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container">
-    <h2>Contact</h2>
-    <p style="text-align:center;">
-      📧 contact@cercades.cf<br>
-      📱 WhatsApp : +237 XXXXXXXX<br>
-      📍 Cameroun
+      Elle agit pour le développement local, l’entraide communautaire
+      et la solidarité sociale.
     </p>
   </div>
 </section>
