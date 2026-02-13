@@ -12,13 +12,14 @@ body {
   color: #333;
 }
 
-/* HEADER */
+/* ===== HEADER PRINCIPAL ===== */
 header {
   background: #f58c1f;
-  padding: 10px 0;
+  padding: 10px 0 0 0;
 }
 
-.header-container {
+/* Ligne logo + signification */
+.top-header {
   width: 90%;
   max-width: 1200px;
   margin: auto;
@@ -27,39 +28,63 @@ header {
   justify-content: space-between;
 }
 
-/* LOGO + CADRE BLANC */
+/* Cadre blanc du logo */
 .logo-box {
-  background: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
+  background: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
 }
 
 .logo-box img {
-  height: 70px;
+  height: 75px;
 }
 
-/* MENU */
+/* Signification du sigle */
+.sigle-text {
+  text-align: center;
+  color: #0055a5;
+  line-height: 1.2;
+  font-size: 15px;
+}
+
+.sigle-text span {
+  font-weight: bold;
+  color: #0055a5;
+}
+
+/* ===== MENU EN ONGLET SOUS LE LOGO ===== */
+.menu-bar {
+  background: #e07b00;
+  margin-top: 10px;
+}
+
+.menu-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
   margin: 0;
-  padding: 0;
+  padding: 12px 0;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  font-size: 15px;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
               url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac') center/cover no-repeat;
@@ -94,7 +119,7 @@ nav ul li a:hover {
   background: #e07b00;
 }
 
-/* SECTION */
+/* ===== SECTION ===== */
 section {
   padding: 60px 20px;
 }
@@ -110,7 +135,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer {
   background: #222;
   color: #fff;
@@ -123,21 +148,36 @@ footer {
 <body>
 
 <header>
-  <div class="header-container">
+  <div class="top-header">
+    <!-- LOGO -->
     <div class="logo-box">
       <img src="logo.png" alt="Logo CERCADES">
     </div>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="apropos.html">À propos</a></li>
-        <li><a href="actions.html">Nos actions</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="soutenir.html">Nous soutenir</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <!-- SIGNIFICATION DU SIGLE -->
+    <div class="sigle-text">
+      <span>CERC</span>le des<br>
+      <span>A</span>mis pour le<br>
+      <span>D</span>éveloppement par<br>
+      l’<span>E</span>ntraide et la<br>
+      <span>S</span>olidarité
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <div class="menu-bar">
+    <div class="menu-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="actions.html">Nos actions</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="soutenir.html">Nous soutenir</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 
