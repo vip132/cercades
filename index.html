@@ -19,7 +19,7 @@
     header {
       background: orange;
       text-align: center;
-      padding: 20px 10px 10px 10px;
+      padding: 25px 10px 15px 10px;
     }
 
     /* Bloc logo + texte */
@@ -27,7 +27,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0; /* Alignement EXACT avec le bord du cadre blanc */
       flex-wrap: wrap;
     }
 
@@ -39,32 +38,33 @@
     }
 
     .logo-cadre img {
-      width: 90px;
+      width: 95px;
       height: auto;
       display: block;
     }
 
-    /* Texte aligné parfaitement au bord du cadre */
+    /* ALIGNEMENT PARFAIT AU BORD DU CADRE */
     .sigle-texte {
       margin: 0;
-      padding: 0;
+      margin-left: 10px; /* correspond exactement au padding du cadre */
       text-align: left;
       max-width: 420px;
       color: white;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.5;
       font-weight: 500;
       font-family: 'Poppins', sans-serif;
     }
 
     .bleu {
-      color: blue;
+      color: #004aad;
       font-weight: 700;
+      letter-spacing: 1px;
     }
 
     /* ===== MENU ONGLET ===== */
     nav {
-      margin-top: 15px;
+      margin-top: 18px;
       overflow-x: auto;
     }
 
@@ -79,8 +79,8 @@
       text-decoration: none;
       color: white;
       background: #333;
-      padding: 10px 18px;
-      border-radius: 25px;
+      padding: 10px 20px;
+      border-radius: 30px;
       font-weight: 600;
       white-space: nowrap;
       transition: 0.3s;
@@ -95,14 +95,14 @@
     /* ===== CONTENU ===== */
     .hero {
       background: white;
-      padding: 40px 20px;
+      padding: 45px 20px;
       text-align: center;
-      font-family: 'Poppins', sans-serif; /* Forcer Poppins */
+      font-family: 'Poppins', sans-serif;
     }
 
     .hero h1 {
       color: orange;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       font-weight: 700;
       font-family: 'Poppins', sans-serif;
     }
@@ -122,6 +122,7 @@
 
       .sigle-texte {
         text-align: center;
+        margin-left: 0;
         margin-top: 10px;
       }
 
