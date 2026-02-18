@@ -43,10 +43,10 @@
       display: block;
     }
 
-    /* ALIGNEMENT PARFAIT AU BORD DU CADRE */
+    /* ALIGNEMENT TEXTE SIGLE */
     .sigle-texte {
       margin: 0;
-      margin-left: 10px; /* correspond exactement au padding du cadre */
+      margin-left: 10px;
       text-align: left;
       max-width: 420px;
       color: white;
@@ -92,26 +92,19 @@
       background: black;
     }
 
-    /* ===== CONTENU ===== */
+    /* ===== CONTENU (SLOGAN UNIFORME) ===== */
     .hero {
       background: white;
       padding: 45px 20px;
       text-align: center;
-      font-family: 'Poppins', sans-serif;
     }
 
-    .hero h1 {
+    .slogan {
       color: orange;
-      margin-bottom: 12px;
+      font-size: 26px; /* même taille pour les deux lignes */
       font-weight: 700;
       font-family: 'Poppins', sans-serif;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #333;
-      font-weight: 500;
-      font-family: 'Poppins', sans-serif;
+      line-height: 1.4;
     }
 
     /* ===== RESPONSIVE MOBILE ===== */
@@ -166,8 +159,10 @@
 
   <!-- CONTENU -->
   <section class="hero">
-    <h1>Ensemble pour le développement local</h1>
-    <p>Par l'entraide et la solidarité</p>
+    <div class="slogan">
+      Ensemble pour le développement local<br>
+      Par l'entraide et la solidarité
+    </div>
   </section>
 
 </body>
