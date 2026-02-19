@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CERCADES</title>
 
-  <!-- Police professionnelle -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -15,7 +14,6 @@
       background: #f4f4f4;
     }
 
-    /* ===== HEADER ===== */
     header {
       background: orange;
       text-align: center;
@@ -24,9 +22,9 @@
 
     .logo-bloc {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
     }
 
     .logo-cadre {
@@ -43,9 +41,8 @@
     }
 
     .sigle-texte {
-      margin: 0;
-      margin-left: 10px;
-      text-align: left;
+      margin-top: 10px;
+      text-align: center;
       max-width: 420px;
       color: white;
       font-size: 16px;
@@ -59,7 +56,6 @@
       letter-spacing: 1px;
     }
 
-    /* ===== MENU ONGLET ===== */
     nav {
       margin-top: 18px;
       overflow-x: auto;
@@ -88,21 +84,25 @@
       background: black;
     }
 
-    /* ===== CONTENU (SLOGAN UNIFORME) ===== */
     .hero {
       background: white;
       padding: 60px 20px;
       text-align: center;
     }
 
-    .slogan {
+    .hero h1 {
       color: orange;
-      font-size: 26px;
+      margin-bottom: 10px;
       font-weight: 700;
-      line-height: 1.4;
+      font-size: 28px;
     }
 
-    /* ===== FOOTER PROFESSIONNEL ===== */
+    .hero p {
+      font-size: 20px;
+      color: #333;
+      font-weight: 600;
+    }
+
     .footer {
       background: #222;
       color: white;
@@ -115,71 +115,47 @@
       margin: 6px 0;
       font-size: 14px;
     }
-
-    /* ===== RESPONSIVE MOBILE ===== */
-    @media (max-width: 600px) {
-      .logo-bloc {
-        flex-direction: column;
-      }
-
-      .sigle-texte {
-        text-align: center;
-        margin-left: 0;
-        margin-top: 10px;
-      }
-
-      .menu {
-        justify-content: flex-start;
-        padding: 0 10px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo-bloc">
-      <div class="logo-cadre">
-        <img src="logo.png" alt="Logo CERCADES">
-      </div>
-
-      <div class="sigle-texte">
-        <span class="bleu">CERC</span>le des 
-        <span class="bleu">A</span>mis pour le 
-        <span class="bleu">D</span>éveloppement 
-        l'<span class="bleu">E</span>ntraide et la 
-        <span class="bleu">S</span>olidarité
-      </div>
+<header>
+  <div class="logo-bloc">
+    <div class="logo-cadre">
+      <img src="logo.png" alt="Logo CERCADES">
     </div>
 
-    <!-- MENU ONGLET -->
-    <nav>
-      <div class="menu">
-        <a href="index.html">Accueil</a>
-        <a href="apropos.html">À propos</a>
-        <a href="projets.html">Projets</a>
-        <a href="galerie.html">Galerie</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- CONTENU -->
-  <section class="hero">
-    <div class="slogan">
-      Ensemble pour le développement local<br>
-      Par l'entraide et la solidarité
+    <div class="sigle-texte">
+      <span class="bleu">CERC</span>le des 
+      <span class="bleu">A</span>mis pour le 
+      <span class="bleu">D</span>éveloppement 
+      l'<span class="bleu">E</span>ntraide et la 
+      <span class="bleu">S</span>olidarité
     </div>
-  </section>
+  </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p><strong>CERCADES</strong> – Cercle des Amis pour le Développement, l’Entraide et la Solidarité</p>
-    <p>Association déclarée N° 000044/RDA/J06/A2/SAAJP/BAPP – Cameroun</p>
-    <p>© 2026 CERCADES – Tous droits réservés</p>
-  </footer>
+  <nav>
+    <div class="menu">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="projets.html">Projets</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Ensemble pour le développement local</h1>
+  <p>Par l'entraide et la solidarité</p>
+</section>
+
+<footer class="footer">
+  <p><strong>CERCADES</strong> – Cercle des Amis pour le Développement, l’Entraide et la Solidarité</p>
+  <p>Association déclarée N° 000044/RDA/J06/A2/SAAJP/BAPP – Cameroun</p>
+  <p>© 2026 CERCADES – Tous droits réservés</p>
+</footer>
 
 </body>
 </html>
