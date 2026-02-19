@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CERCADES</title>
+  <title>Projets - CERCADES</title>
 
-  <!-- Police professionnelle -->
+  <!-- Police -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -59,7 +59,7 @@
       letter-spacing: 1px;
     }
 
-    /* ===== MENU ONGLET ===== */
+    /* ===== MENU ===== */
     nav {
       margin-top: 18px;
       overflow-x: auto;
@@ -88,21 +88,48 @@
       background: black;
     }
 
-    /* ===== CONTENU (SLOGAN UNIFORME) ===== */
-    .hero {
+    /* ===== CONTENU ===== */
+    .contenu {
+      max-width: 1000px;
+      margin: auto;
       background: white;
-      padding: 60px 20px;
-      text-align: center;
+      padding: 40px 20px;
+      margin-top: 30px;
+      border-radius: 10px;
     }
 
-    .slogan {
+    h1 {
       color: orange;
-      font-size: 26px;
-      font-weight: 700;
-      line-height: 1.4;
+      text-align: center;
+      margin-bottom: 30px;
     }
 
-    /* ===== FOOTER PROFESSIONNEL ===== */
+    .projet {
+      border-left: 6px solid orange;
+      padding: 20px;
+      background: #fafafa;
+      border-radius: 8px;
+    }
+
+    .projet h2 {
+      margin-top: 0;
+      color: #004aad;
+    }
+
+    .info {
+      font-weight: 600;
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .description {
+      margin-top: 15px;
+      line-height: 1.7;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* ===== FOOTER ===== */
     .footer {
       background: #222;
       color: white;
@@ -114,24 +141,6 @@
     .footer p {
       margin: 6px 0;
       font-size: 14px;
-    }
-
-    /* ===== RESPONSIVE MOBILE ===== */
-    @media (max-width: 600px) {
-      .logo-bloc {
-        flex-direction: column;
-      }
-
-      .sigle-texte {
-        text-align: center;
-        margin-left: 0;
-        margin-top: 10px;
-      }
-
-      .menu {
-        justify-content: flex-start;
-        padding: 0 10px;
-      }
     }
   </style>
 </head>
@@ -154,7 +163,6 @@
       </div>
     </div>
 
-    <!-- MENU ONGLET -->
     <nav>
       <div class="menu">
         <a href="index.html">Accueil</a>
@@ -167,11 +175,26 @@
   </header>
 
   <!-- CONTENU -->
-  <section class="hero">
-    <div class="slogan">
-      Ensemble pour le développement local<br>
-      Par l'entraide et la solidarité
+  <section class="contenu">
+    <h1>Nos Actions et Projets</h1>
+
+    <div class="projet">
+      <h2>Distribution de viande de bœuf aux nécessiteux</h2>
+
+      <p class="info">📍 Villes : Foumban et Yaoundé</p>
+      <p class="info">📌 Localités : Maghait, Nji Nkah, Nji Ndare, Elig-Efa, Malantouen, Nji Nsé, Kouootamo</p>
+      <p class="info">📅 Année : 2025</p>
+
+      <p class="description">
+        Dans le cadre de ses actions de solidarité, CERCADES a organisé une distribution
+        de paquets de viande de bœuf aux familles nécessiteuses dans plusieurs localités
+        des villes de Foumban et Yaoundé. Ces dons ont permis aux bénéficiaires de mieux
+        célébrer la fin du mois sacré de Ramadan dans la dignité, la joie et le partage.
+        Cette initiative traduit l’engagement de CERCADES en faveur de l’entraide sociale
+        et du soutien aux communautés vulnérables.
+      </p>
     </div>
+
   </section>
 
   <!-- FOOTER -->
