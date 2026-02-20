@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CERCADES</title>
 
+  <!-- Police professionnelle -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -14,17 +15,19 @@
       background: #f4f4f4;
     }
 
+    /* ===== HEADER ===== */
     header {
       background: orange;
       text-align: center;
       padding: 25px 10px 15px 10px;
+      position: relative;
     }
 
     .logo-bloc {
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     .logo-cadre {
@@ -41,8 +44,9 @@
     }
 
     .sigle-texte {
-      margin-top: 10px;
-      text-align: center;
+      margin: 0;
+      margin-left: 10px;
+      text-align: left;
       max-width: 420px;
       color: white;
       font-size: 16px;
@@ -56,6 +60,7 @@
       letter-spacing: 1px;
     }
 
+    /* ===== MENU ===== */
     nav {
       margin-top: 18px;
       overflow-x: auto;
@@ -84,26 +89,44 @@
       background: black;
     }
 
+    /* ===== HERO (ACCUEIL) ===== */
     .hero {
       background: white;
-      padding: 60px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
 
     .hero h1 {
       color: orange;
-      margin-bottom: 10px;
       font-weight: 700;
       font-size: 28px;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
     }
 
-    .hero p {
-      font-size: 20px;
-      color: #333;
-      font-weight: 600;
+    /* Ligne 2 identique à la ligne 1 */
+    .hero .ligne2 {
+      color: orange;
+      font-weight: 700;
+      font-size: 28px;
+      margin: 5px 0 0 0;
+      font-family: 'Poppins', sans-serif;
     }
 
-    .footer {
+    /* ===== PREVIEW ACTIVITES ===== */
+    .preview {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .preview h2 {
+      color: #004aad;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
       background: #222;
       color: white;
       text-align: center;
@@ -111,51 +134,79 @@
       margin-top: 40px;
     }
 
-    .footer p {
+    footer p {
       margin: 6px 0;
       font-size: 14px;
     }
+
+    /* ===== BOUTON WHATSAPP ===== */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo-bloc">
-    <div class="logo-cadre">
-      <img src="logo.png" alt="Logo CERCADES">
+  <!-- HEADER -->
+  <header>
+    <div class="logo-bloc">
+      <div class="logo-cadre">
+        <img src="logo.png" alt="Logo CERCADES">
+      </div>
+
+      <div class="sigle-texte">
+        <span class="bleu">CERC</span>le des 
+        <span class="bleu">A</span>mis pour le 
+        <span class="bleu">D</span>éveloppement 
+        l'<span class="bleu">E</span>ntraide et la 
+        <span class="bleu">S</span>olidarité
+      </div>
     </div>
 
-    <div class="sigle-texte">
-      <span class="bleu">CERC</span>le des 
-      <span class="bleu">A</span>mis pour le 
-      <span class="bleu">D</span>éveloppement 
-      l'<span class="bleu">E</span>ntraide et la 
-      <span class="bleu">S</span>olidarité
-    </div>
-  </div>
+    <nav>
+      <div class="menu">
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="projets.html">Projets</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-  <nav>
-    <div class="menu">
-      <a href="index.html">Accueil</a>
-      <a href="apropos.html">À propos</a>
-      <a href="projets.html">Projets</a>
-      <a href="galerie.html">Galerie</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
+  <!-- ACCUEIL -->
+  <section class="hero">
+    <h1>Ensemble pour le développement local</h1>
+    <div class="ligne2">Par l'entraide et la solidarité</div>
+  </section>
 
-<section class="hero">
-  <h1>Ensemble pour le développement local</h1>
-  <p>Par l'entraide et la solidarité</p>
-</section>
+  <!-- PREVIEW -->
+  <section class="preview">
+    <h2>Nos actions récentes</h2>
+    <p>Découvrez nos interventions solidaires sur le terrain.</p>
+  </section>
 
-<footer class="footer">
-  <p><strong>CERCADES</strong> – Cercle des Amis pour le Développement, l’Entraide et la Solidarité</p>
-  <p>Association déclarée N° 000044/RDA/J06/A2/SAAJP/BAPP – Cameroun</p>
-  <p>© 2026 CERCADES – Tous droits réservés</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>CERCADES</strong> – Cercle des Amis pour le Développement</p>
+    <p>Association déclarée N° 000044 – Cameroun</p>
+    <p>© 2026 CERCADES – Tous droits réservés</p>
+  </footer>
+
+  <!-- BOUTON WHATSAPP -->
+  <a class="whatsapp" href="https://wa.me/237XXXXXXXX">WhatsApp</a>
 
 </body>
 </html>
