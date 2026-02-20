@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - CERCADES</title>
+
+  <!-- Police -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f4f4;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: orange;
+      text-align: center;
+      padding: 25px 10px 15px 10px;
+    }
+
+    .logo-bloc {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-cadre {
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    .logo-cadre img {
+      width: 95px;
+      height: auto;
+      display: block;
+    }
+
+    .sigle-texte {
+      margin: 0;
+      margin-left: 10px;
+      text-align: left;
+      max-width: 420px;
+      color: white;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .bleu {
+      color: #004aad;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* ===== MENU ===== */
+    nav {
+      margin-top: 18px;
+      overflow-x: auto;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: nowrap;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      background: #333;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    .menu a:hover {
+      background: black;
+    }
+
+    /* ===== CONTENU ===== */
+    .contenu {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 40px 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: orange;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #004aad;
+      margin-top: 30px;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 16px;
+      color: #333;
+    }
+
+    ul {
+      line-height: 1.8;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 40px;
+    }
+
+    .footer p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-bloc">
+      <div class="logo-cadre">
+        <img src="logo.png" alt="Logo CERCADES">
+      </div>
+
+      <div class="sigle-texte">
+        <span class="bleu">CERC</span>le des 
+        <span class="bleu">A</span>mis pour le 
+        <span class="bleu">D</span>éveloppement 
+        l'<span class="bleu">E</span>ntraide et la 
+        <span class="bleu">S</span>olidarité
+      </div>
+    </div>
+
+    <nav>
+      <div class="menu">
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="projets.html">Projets</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONTENU -->
+  <section class="contenu">
+    <h1>À propos de CERCADES</h1>
+
+    <p>
+      CERCADES (Cercle des Amis pour le Développement, l’Entraide et la Solidarité)
+      est une association citoyenne engagée dans la promotion du développement local,
+      de l’entraide communautaire et de la solidarité sociale au Cameroun.
+    </p>
+
+    <h2>Statut légal</h2>
+    <p>
+      L’association est légalement déclarée sous le numéro :
+      <strong>000044/RDA/J06/A2/SAAJP/BAPP</strong>.
+    </p>
+
+    <h2>Notre mission</h2>
+    <p>
+      Promouvoir le développement local, renforcer l’entraide entre les populations
+      et soutenir les initiatives sociales en faveur des personnes vulnérables.
+    </p>
+
+    <h2>Notre vision</h2>
+    <p>
+      Construire des communautés solidaires, autonomes et engagées pour un avenir
+      durable et équitable.
+    </p>
+
+    <h2>Nos valeurs</h2>
+    <ul>
+      <li>Solidarité</li>
+      <li>Transparence</li>
+      <li>Engagement</li>
+      <li>Responsabilité</li>
+      <li>Développement communautaire</li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p><strong>CERCADES</strong> – Cercle des Amis pour le Développement, l’Entraide et la Solidarité</p>
+    <p>Association déclarée N° 000044/RDA/J06/A2/SAAJP/BAPP – Cameroun</p>
+    <p>© 2026 CERCADES – Tous droits réservés</p>
+  </footer>
+
+</body>
+</html>
