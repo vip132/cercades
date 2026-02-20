@@ -23,6 +23,19 @@
       position: relative;
     }
 
+    /* Bouton langue */
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: white;
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
     .logo-bloc {
       display: flex;
       align-items: center;
@@ -89,7 +102,7 @@
       background: black;
     }
 
-    /* ===== HERO (ACCUEIL) ===== */
+    /* ===== HERO ===== */
     .hero {
       background: white;
       padding: 50px 20px;
@@ -101,19 +114,16 @@
       font-weight: 700;
       font-size: 28px;
       margin: 0;
-      font-family: 'Poppins', sans-serif;
     }
 
-    /* Ligne 2 identique à la ligne 1 */
     .hero .ligne2 {
       color: orange;
       font-weight: 700;
       font-size: 28px;
       margin: 5px 0 0 0;
-      font-family: 'Poppins', sans-serif;
     }
 
-    /* ===== PREVIEW ACTIVITES ===== */
+    /* ===== PREVIEW ===== */
     .preview {
       max-width: 900px;
       margin: auto;
@@ -161,6 +171,10 @@
 
   <!-- HEADER -->
   <header>
+
+    <!-- Bouton langue -->
+    <div class="lang-switch" onclick="toggleLang()">FR | EN</div>
+
     <div class="logo-bloc">
       <div class="logo-cadre">
         <img src="logo.png" alt="Logo CERCADES">
@@ -188,14 +202,14 @@
 
   <!-- ACCUEIL -->
   <section class="hero">
-    <h1>Ensemble pour le développement local</h1>
-    <div class="ligne2">Par l'entraide et la solidarité</div>
+    <h1 id="title1">Ensemble pour le développement local</h1>
+    <div class="ligne2" id="title2">Par l'entraide et la solidarité</div>
   </section>
 
   <!-- PREVIEW -->
   <section class="preview">
-    <h2>Nos actions récentes</h2>
-    <p>Découvrez nos interventions solidaires sur le terrain.</p>
+    <h2 id="actionsTitle">Nos actions récentes</h2>
+    <p id="actionsText">Découvrez nos interventions solidaires sur le terrain.</p>
   </section>
 
   <!-- FOOTER -->
@@ -207,6 +221,35 @@
 
   <!-- BOUTON WHATSAPP -->
   <a class="whatsapp" href="https://wa.me/237695028880" target="_blank">WhatsApp</a>
+
+  <!-- SCRIPT BILINGUE -->
+  <script>
+    let currentLang = "fr";
+
+    function toggleLang() {
+      if (currentLang === "fr") {
+        document.getElementById("title1").innerText =
+          "Together for local development";
+        document.getElementById("title2").innerText =
+          "Through mutual aid and solidarity";
+        document.getElementById("actionsTitle").innerText =
+          "Our recent actions";
+        document.getElementById("actionsText").innerText =
+          "Discover our solidarity interventions in the field.";
+        currentLang = "en";
+      } else {
+        document.getElementById("title1").innerText =
+          "Ensemble pour le développement local";
+        document.getElementById("title2").innerText =
+          "Par l'entraide et la solidarité";
+        document.getElementById("actionsTitle").innerText =
+          "Nos actions récentes";
+        document.getElementById("actionsText").innerText =
+          "Découvrez nos interventions solidaires sur le terrain.";
+        currentLang = "fr";
+      }
+    }
+  </script>
 
 </body>
 </html>
