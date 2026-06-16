@@ -16,78 +16,77 @@
     }
 
     /* ===== HEADER ===== */
-    header {
-      background: orange;
-      text-align: center;
-      padding: 25px 10px 15px 10px;
-    }
+    header{
+  background:orange;
+  text-align:center;
+  padding:25px 10px;
+}
 
-    .logo-bloc {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+.logo-bloc{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
 
-    .logo-cadre {
-      background: white;
-      padding: 10px;
-      border-radius: 10px;
-      display: inline-block;
-    }
+.logo-cadre{
+  background:white;
+  padding:12px;
+  border-radius:12px;
+  display:inline-block;
+}
 
-    .logo-cadre img {
-      width: 95px;
-      height: auto;
-      display: block;
-    }
+.logo-cadre img{
+  width:140px;
+  height:auto;
+  display:block;
+}
 
-    .sigle-texte {
-      margin: 0;
-      margin-left: 10px;
-      text-align: left;
-      max-width: 420px;
-      color: white;
-      font-size: 16px;
-      line-height: 1.5;
-      font-weight: 500;
-    }
+.sigle-texte{
+  margin-top:12px;
+  text-align:center;
+  color:white;
+  font-family:Rockwell, serif;
+  font-size:18px;
+  line-height:1.6;
+  font-weight:bold;
+}
 
-    .bleu {
-      color: #004aad;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
+.bleu{
+  color:#004aad;
+  font-weight:900;
+}
 
-    /* ===== MENU ===== */
-    nav {
-      margin-top: 18px;
-      overflow-x: auto;
-    }
+.slogan{
+  margin-top:15px;
+  color:white;
+  font-family:"Rockwell Extra Bold", Rockwell, serif;
+  font-size:24px;
+  line-height:1.5;
+  font-weight:bold;
+}
 
-    .menu {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: nowrap;
-    }
+.menu{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
 
-    .menu a {
-      text-decoration: none;
-      color: white;
-      background: #333;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-weight: 600;
-      white-space: nowrap;
-      transition: 0.3s;
-      font-size: 14px;
-    }
+.menu a{
+  text-decoration:none;
+  color:white;
+  background:#222;
+  padding:10px 20px;
+  border-radius:25px;
+  font-family:Rockwell, serif;
+  font-weight:bold;
+}
 
-    .menu a:hover {
-      background: black;
-    }
-
+.menu a:hover{
+  background:black;
+}
     /* ===== CONTENU ===== */
     .contenu {
       max-width: 1000px;
@@ -141,29 +140,36 @@
 
   <!-- HEADER -->
   <header>
-    <div class="logo-bloc">
-      <div class="logo-cadre">
-        <img src="logo.png" alt="Logo CERCADES">
-      </div>
 
-      <div class="sigle-texte">
-        <span class="bleu">CERC</span>le des 
-        <span class="bleu">A</span>mis pour le 
-        <span class="bleu">D</span>éveloppement 
-        l'<span class="bleu">E</span>ntraide et la 
-        <span class="bleu">S</span>olidarité
-      </div>
+  <div class="logo-bloc">
+
+    <div class="logo-cadre">
+      <img src="logo.png" alt="Logo CERCADES">
     </div>
 
-    <nav>
-      <div class="menu">
-        <a href="index.html">Accueil</a>
-        <a href="apropos.html">À propos</a>
-        <a href="projets.html">Projets</a>
-        <a href="galerie.html">Galerie</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
+    <div class="sigle-texte">
+      <span class="bleu">CERC</span>le des Amis pour le Développement,<br>
+      l'<span class="bleu">E</span>ntraide et la
+      <span class="bleu">S</span>olidarité
+    </div>
+
+    <div class="slogan">
+      Ensemble pour le développement local<br>
+      par l'entraide et la solidarité
+    </div>
+
+  </div>
+
+  <nav>
+    <div class="menu">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="projets.html">Projets</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
   </header>
 
   <!-- CONTENU -->
