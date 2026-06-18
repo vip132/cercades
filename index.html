@@ -218,7 +218,41 @@ font-size:18px;
 
 }
 
-    }
+    }/* ===== CHIFFRES CLÉS ===== */
+
+.stats{
+    max-width:1100px;
+    margin:35px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    padding:0 15px;
+}
+
+.stat{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.stat:hover{
+    transform:translateY(-8px);
+}
+
+.stat h2{
+    color:#f7931e;
+    font-size:40px;
+    margin:0;
+}
+
+.stat p{
+    color:#004aad;
+    font-weight:bold;
+    margin-top:10px;
+}
 /* CONTENU */
 
 .section{
