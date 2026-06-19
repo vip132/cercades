@@ -87,18 +87,81 @@
 .menu a:hover{
   background:black;
 }
-<section class="hero-apropos">
+/* ===== BANNIÈRE A PROPOS ===== */
 
-<img src="logo-cercades2.png" alt="Logo CERCADES">
+.hero-apropos{
 
-<h1>À PROPOS DE CERCADES</h1>
+background:linear-gradient(rgba(247,147,30,.92),rgba(247,147,30,.92));
 
-<p>
-Une association citoyenne engagée pour le développement local,
-l'entraide et la solidarité.
-</p>
+padding:70px 20px;
 
-</section>
+text-align:center;
+
+color:white;
+
+}
+
+.hero-apropos img{
+
+width:180px;
+
+background:white;
+
+padding:18px;
+
+border-radius:22px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+margin-bottom:25px;
+
+}
+
+.hero-apropos h1{
+
+font-size:42px;
+
+margin:0;
+
+color:white;
+
+}
+
+.hero-apropos p{
+
+max-width:700px;
+
+margin:20px auto 0;
+
+font-size:20px;
+
+line-height:1.8;
+
+color:white;
+
+}
+
+@media(max-width:768px){
+
+.hero-apropos img{
+
+width:120px;
+
+}
+
+.hero-apropos h1{
+
+font-size:30px;
+
+}
+
+.hero-apropos p{
+
+font-size:17px;
+
+}
+
+}
     /* ===== CONTENU ===== */
     .contenu {
       max-width: 1000px;
@@ -190,7 +253,18 @@ l'<span class="bleu">E</span>ntraide et la
   </nav>
 
   </header>
+<section class="hero-apropos">
 
+<img src="logo-cercades2.png" alt="Logo CERCADES">
+
+<h1>À PROPOS DE CERCADES</h1>
+
+<p>
+Une association citoyenne engagée pour le développement local,
+l'entraide et la solidarité.
+</p>
+
+</section>
   <!-- CONTENU -->
   <section class="contenu">
     <h1>À propos de CERCADES</h1>
