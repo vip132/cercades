@@ -187,7 +187,38 @@ font-size:17px;
       font-size: 16px;
       color: #333;
     }
+/* ===== CARTES ===== */
 
+.cartes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:35px;
+}
+
+.carte{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    border-top:6px solid #f7931e;
+    transition:0.3s;
+}
+
+.carte:hover{
+    transform:translateY(-8px);
+}
+
+.carte h2{
+    margin-top:0;
+    color:#004aad;
+}
+
+.carte p,
+.carte ul{
+    color:#444;
+    line-height:1.8;
+}
     /* ===== FOOTER ===== */
 .footer {
   background: #222;
