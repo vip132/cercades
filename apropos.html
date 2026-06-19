@@ -219,6 +219,53 @@ font-size:17px;
     color:#444;
     line-height:1.8;
 }
+/* ===== FRISE CHRONOLOGIQUE ===== */
+
+.timeline{
+margin-top:40px;
+border-left:5px solid #f7931e;
+padding-left:30px;
+}
+
+.timeline-item{
+position:relative;
+margin-bottom:40px;
+}
+
+.timeline-item::before{
+content:"";
+position:absolute;
+left:-40px;
+top:8px;
+width:18px;
+height:18px;
+background:#004aad;
+border:4px solid white;
+border-radius:50%;
+box-shadow:0 0 0 3px #f7931e;
+}
+
+.timeline-date{
+display:inline-block;
+background:#f7931e;
+color:white;
+padding:6px 15px;
+border-radius:20px;
+font-weight:bold;
+margin-bottom:12px;
+}
+
+.timeline-content{
+background:#fafafa;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.timeline-content h3{
+margin-top:0;
+color:#004aad;
+}
     /* ===== FOOTER ===== */
 .footer {
   background: #222;
