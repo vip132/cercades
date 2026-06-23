@@ -87,6 +87,60 @@
 .menu a:hover{
   background:black;
 }
+/* ===== BANNIÈRE PROJETS ===== */
+
+.hero-projets{
+    background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("Ramadan.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    height:500px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+.hero-projets h1{
+    font-family:Rockwell, serif;
+    font-size:50px;
+    margin:0;
+    letter-spacing:2px;
+    text-shadow:3px 3px 10px black;
+}
+
+.hero-projets p{
+    margin-top:20px;
+    font-size:22px;
+    line-height:1.7;
+    text-shadow:2px 2px 8px black;
+    max-width:850px;
+}
+
+@media(max-width:768px){
+
+.hero-projets{
+    height:350px;
+}
+
+.hero-projets h1{
+    font-size:32px;
+}
+
+.hero-projets p{
+    font-size:18px;
+}
+
+}
     /* ===== CONTENU ===== */
     .contenu {
       max-width: 1000px;
@@ -180,6 +234,19 @@ l'<span class="bleu">E</span>ntraide et la
   </nav>
 
   </header>
+  <section class="hero-projets">
+
+<div>
+
+<h1>NOS PROJETS</h1>
+
+<p>
+Des actions concrètes qui améliorent durablement les conditions de vie des communautés grâce à la solidarité, à l'entraide et au développement local.
+</p>
+
+</div>
+
+  </section>
   <!-- CONTENU -->
   <section class="contenu">
     <h1>Nos Actions et Projets</h1>
