@@ -229,6 +229,39 @@
     margin-top:18px;
     line-height:1.9;
 }
+/* ===== CHIFFRES CLÉS ===== */
+
+.stats-projets{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin:45px 0;
+}
+
+.stat-projet{
+    background:white;
+    border-radius:18px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.stat-projet:hover{
+    transform:translateY(-8px);
+}
+
+.stat-projet h2{
+    margin:0;
+    color:#f7931e;
+    font-size:42px;
+}
+
+.stat-projet p{
+    margin-top:12px;
+    color:#004aad;
+    font-weight:bold;
+}
     /* ===== FOOTER ===== */
     .footer {
       background: #222;
@@ -298,7 +331,35 @@ Des actions concrètes qui améliorent durablement les conditions de vie des com
   <!-- CONTENU -->
   <section class="contenu">
     <h1>Nos Actions et Projets</h1>
+<p style="text-align:center;max-width:850px;margin:auto;line-height:1.9;font-size:18px;">
+Chaque projet porté par CERCADES répond à un besoin réel des communautés.
+Notre objectif est d'apporter des solutions concrètes, durables et solidaires
+au bénéfice des populations.
+</p>
 
+<div class="stats-projets">
+
+<div class="stat-projet">
+<h2>1</h2>
+<p>Projet majeur réalisé</p>
+</div>
+
+<div class="stat-projet">
+<h2>9</h2>
+<p>Localités bénéficiaires</p>
+</div>
+
+<div class="stat-projet">
+<h2>500+</h2>
+<p>Personnes touchées</p>
+</div>
+
+<div class="stat-projet">
+<h2>2026</h2>
+<p>Dernière grande action</p>
+</div>
+
+</div>
     <div class="projet">
 
 <div class="projet-images">
